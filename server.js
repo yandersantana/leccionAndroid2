@@ -85,7 +85,7 @@ app.get('/mostrarUsuario/:id',(req,res)=>{
     });
 });
 
-app.put('/actualizarUsuario',(req,res)=>{
+app.put('/actualizarUsuario/:id',(req,res)=>{
     var client = new pg.Client(conString);
     var id=req.body.id;
     client.connect(function(err) {
